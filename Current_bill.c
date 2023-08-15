@@ -1,34 +1,25 @@
 #include<stdio.h>
-int main()
-{
-    int units,uc=0;
-    scanf("%d",&units);
-    float bill,sr,tb;
-    if(units<200)
-    {
-        bill=units*1.20;
+int main(){
+    int r;
+    scanf("%d",&r);
+    if(r<=199){
+        float ans=r*1.20;
+        float s =ans+100;
+        printf("%.2f",s);
     }
-    else if(units>=200 && units<400)
-    {
-        bill=units*1.50;
+    else if(r>=200 && r<400){
+        float ans=r*1.50;
+        float s =ans+100;
+        printf("%.2f",s);
     }
-    else if(units>=400 && units<600)
-    {
-        bill=units*1.80;
+    else if(r>=400 && r<600){
+        float ans=r*1.80;
+        float s =ans+(ans*0.15);
+        printf("%.2f",s);
     }
-    else 
-    {
-        bill=units*2.00;
-    }
-    if(bill>=400)
-    {
-        sr=bill*0.15;
-        tb=bill+sr;
-        printf("%0.2f",tb);
-    }
-    else
-    {
-        tb=bill+100;
-        printf("%0.2f",tb);
+    else{
+        float ans=r*2.00;
+        float s =ans+(ans*0.15);
+        printf("%.2f",s);
     }
 }
